@@ -5,11 +5,11 @@ function ModelLoader() {
     this.models = [];
     this.models["greenie"] = ["/assets/vox/horse-00.vox", 1, "object"];
 
-/*    this.models["greenie-1"] = ["/assets/vox/horse-00.vox", 1, "object"];
+    this.models["greenie-1"] = ["/assets/vox/horse-00.vox", 1, "object"];
     this.models["greenie-2"] = ["/assets/vox/horse-01.vox", 1, "object"];
     this.models["greenie-3"] = ["/assets/vox/horse-02.vox", 1, "object"];
     this.models["greenie-4"] = ["/assets/vox/horse-03.vox", 1, "object"];
-*/
+
     this.models["agent"] = ["/assets/vox/agent.vox", 0.1, "object"];
     this.models["agentblack"] = ["/assets/vox/agent_black.vox", 0.1, "object"];
     this.models["hearty"] = ["/assets/vox/hearty.vox", 1, "object"];

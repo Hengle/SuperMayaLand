@@ -12,8 +12,6 @@ function Maps() {
     // Object => color in obj image
     this.objects["Agent"] = { r: 0xFF, g: 0x00, b: 0x00 };
     this.objects["Greenie"] = { r: 0xEE, g: 0x00, b: 0x00 };
-
-
     this.objects["Dudo"] = { r: 0xDD, g: 0x00, b: 0x00 };
     this.objects["Hearty"] = { r: 0xCC, g: 0x00, b: 0x00 };
     this.objects["AgentBlack"] = { r: 0xBB, g: 0x00, b: 0x00 };

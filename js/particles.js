@@ -20,7 +20,7 @@ function ParticlePool(size, type) {
     };
 
     ParticlePool.prototype.update = function (time, delta) {
-        // Dim lights 
+        // Dim lights
         for(var i = 0; i < this.lights.length; i++) {
             this.lights[i].intensity -= 0.5;
             if (this.lights[i].intensity <= 0) {
@@ -202,10 +202,10 @@ function ParticlePool(size, type) {
         vz = dirz + (1 - get_rand() * 2);
         type = "chunk_debris";
      //   if(chunk.current_blocks > 0) {
-     //       mass = 1/(chunk.current_blocks*0.01); 
+     //       mass = 1/(chunk.current_blocks*0.01);
      //       console.log(mass);
      //   }
-     //   if(mass > 1) { 
+     //   if(mass > 1) {
      //       mass = 1;
      //   }
 
@@ -357,7 +357,7 @@ function ParticlePool(size, type) {
     };
 
 
-    // Debris 
+    // Debris
     ParticlePool.prototype.debris = function (x, y, z, size, r, g, b, virtual, dirx, diry, dirz, stay) {
         if(stay == null) { stay = true; }
         var vx, vy, vz, fx, fz;
@@ -490,7 +490,7 @@ function ParticlePool(size, type) {
     };
 
     ParticlePool.prototype.portalMagic = function (x, y, z) {
-        var r = 0; 
+        var r = 0;
         var g = 0;
         var b = 0;
         if(get_rand() > 0.5) {
@@ -500,7 +500,7 @@ function ParticlePool(size, type) {
         } else {
             r = 200 + get_rand() * 55 | 0;
             g = 0;
-            b = 200 + get_rand() * 55 | 0; 
+            b = 200 + get_rand() * 55 | 0;
         }
         this.get({
             size: 0.5,
@@ -554,7 +554,7 @@ function ParticlePool(size, type) {
             r = 200 + get_rand() * 55;
             g = 150 + get_rand() * 80;
             b = 20 + get_rand() * 20;
-            // white 
+            // white
             //          r = g = b = 200+get_rand()*55;
         } else if (v < 0.6) {
             // black
@@ -1027,8 +1027,8 @@ function Particle() {
                 break;
             case "chunk_debris":
                 this.mesh.rotation.set(
-                        this.vx/this.spin, 
-                        this.vy/this.spin, 
+                        this.vx/this.spin,
+                        this.vy/this.spin,
                         this.vz/this.spin
                 );
                 if(this.chunk.owner.base_type == "enemy" || this.chunk.owner.base_type == "player") {
@@ -1118,7 +1118,7 @@ function Particle() {
             if (this.particle_type == 1) {
                 this.mesh.rotation.set(this.vx, this.vy, this.vz);
             }
-        } 
+        }
 
         if (!this.active) {
             switch (this.type) {

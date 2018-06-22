@@ -414,7 +414,8 @@ function Enemy() {
                 } else {
                     if (this.target.base_type == "player") {
                         this.moving = false;
-                        this.shoot();
+                        // AJAY: stop death
+                        //this.shoot();
                     }
                 }
             } else {
@@ -447,7 +448,8 @@ function Enemy() {
                                 }
                                 if (this.target != 0 && this.target.base_type == "player") {
                                     this.loadWeapon();
-                                    this.shoot();
+                                    // Stop death
+                                    //this.shoot();
                                 }
                             } else if (game.cdList[idx].owner.base_type == "weapon") {
                                 // walk to weapon
