@@ -1,0 +1,10 @@
+[Fri Jun 22 01:14:35 2018] INFO: Opened log file Urho3D.log
+[Fri Jun 22 01:14:35 2018] INFO: Created 3 worker threads
+[Fri Jun 22 01:14:35 2018] INFO: Added resource path /home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/Data/
+[Fri Jun 22 01:14:35 2018] INFO: Added resource path /home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CoreData/
+[Fri Jun 22 01:14:35 2018] INFO: Set screen mode 800x600 windowed monitor 0 resizable multisample 2
+[Fri Jun 22 01:14:35 2018] INFO: Initialized input
+[Fri Jun 22 01:14:35 2018] INFO: Initialized user interface
+[Fri Jun 22 01:14:35 2018] INFO: Initialized renderer
+[Fri Jun 22 01:14:35 2018] ERROR: Could not initialize audio output
+[Fri Jun 22 01:14:35 2018] INFO: Initialized engine

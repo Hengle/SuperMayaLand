@@ -1,0 +1,7 @@
+/home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CMakeFiles/install/strip.dir
+/home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CMakeFiles/install/local.dir
+/home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CMakeFiles/SuperMayaLand.dir
+/home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CMakeFiles/rebuild_cache.dir
+/home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CMakeFiles/edit_cache.dir
+/home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CMakeFiles/install.dir
+/home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/CMakeFiles/list_install_components.dir
