@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  @CMakeFiles/SuperMayaLand.dir/objects1.rsp @CMakeFiles/SuperMayaLand.dir/objects2.rsp  -o SuperMayaLand 

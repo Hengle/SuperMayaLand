@@ -727,6 +727,7 @@ void Map::Level1()
     std::vector<Vector3> buildings;
     std::vector<Vector3> trees;
 
+
     // Create some roads
     int size = 200;
     for(int x = 0; x < map_size_x; x++) {
@@ -791,6 +792,7 @@ void Map::Level1()
         }
     }
 
+
     // Now fill squares between streets with either grass or concrete
     int light_offset = 80;
     int type = 0; // 0 grass, 1 concrete TBD: Create static constants for these.
@@ -800,19 +802,21 @@ void Map::Level1()
             if(world->Exists(x,road_pos_y,z)) {
                 continue;
             }
-            if(Random(10) > 5) {
+
+            //if(Random(10) > 5) {
                 // Grass
                 type = 0;
                 r = 145;
                 g = 205;
                 b = 74;
-            } else {
+            /*} else {
                 // Concrete
                 type = 1;
                 r = 151;
                 g = 154;
                 b = 158;
-            }
+            }*/
+            
             int max_x = 0;
             int max_z = 0;
             int xx = x;
@@ -825,6 +829,8 @@ void Map::Level1()
             }
             for(int x_ = x; x_ <= x + max_x; x_++) {
                 for(int z_ = z; z_ <= z + max_z; z_++) {
+                    
+                    /*                    
                     // Add traffic lights
                     if(x_ == x+1 && z_ == z+1) {
                         // First direction
@@ -875,6 +881,7 @@ void Map::Level1()
                         }
                         GenerateTrafficLight(Vector3(x_, road_pos_y+1, z_), 0);
                     }
+                    
 
                     // Add lights
                     if(x_ % light_offset == 0 && x_ != x && x_ != x+max_x && z_-z == side_walk_size-1) {
@@ -890,26 +897,31 @@ void Map::Level1()
                     } else if(z_ % light_offset == 0 && z_ != z && z_ != z+max_z && x_-x == max_x - side_walk_size) {
                         // Forth direction
                         GenerateLight(Vector3(x_, road_pos_y+1, z_), 3);
-                    }
+                    }*/
 
+
+/*
                     // Add sidewalks
                     if(z_ < z + side_walk_size || z_ >= z + max_z - side_walk_size) {
                         world->AddBlock(x_,road_pos_y+1,z_, 232, 235, 239);
                     } else if(x_ < x + side_walk_size || x_ >= x + max_x - side_walk_size) {
                         world->AddBlock(x_,road_pos_y+1,z_, 232, 235, 239);
                     }
+*/                   
                     world->AddBlock(x_,road_pos_y,z_, r, g, b);
 
                 }
             }
             if(type == 1) {
-                GenerateBuildings(Vector3(x+side_walk_size, road_pos_y+1, z+side_walk_size), 
-                                  Vector3(x+max_x-side_walk_size, road_pos_y+1, z+max_z-side_walk_size)
-                                 );
+
+                // Disable building generation
+                //                GenerateBuildings(Vector3(x+side_walk_size, road_pos_y+1, z+side_walk_size), 
+                //                Vector3(x+max_x-side_walk_size, road_pos_y+1, z+max_z-side_walk_size)
+                //                 );
             } else if(type == 0)  {
-                GeneratePark(Vector3(x+side_walk_size, road_pos_y+1, z+side_walk_size), 
+            /*    GeneratePark(Vector3(x+side_walk_size, road_pos_y+1, z+side_walk_size), 
                              Vector3(x+max_x-side_walk_size, road_pos_y+1, z+max_z-side_walk_size)
-                            );
+                            );*/
             }
         }
     }

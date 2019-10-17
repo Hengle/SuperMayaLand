@@ -13,6 +13,7 @@
 #include "world.h"
 #include "utils.h"
 #include "vox.h"
+#include "voxframe.h"
 #include "chunk.h"
 
 using namespace Urho3D;
@@ -34,6 +35,13 @@ public:
     void RemoveMana(float m);
     Node *node;
 
+    typedef enum {
+        Idle,
+        Walk,
+        Jump,
+        Attack
+    } State;
+
 private:
     Context* context;
     StaticModel *model;
@@ -53,6 +61,10 @@ private:
     float velo_back;
     float velo_forward;
     Vox *vox;
+    VoxFrame  *vox_frame;
+    float frame_time;
+    State state;
+    
     float scale;
 
     bool jump;

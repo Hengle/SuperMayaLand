@@ -3,6 +3,8 @@
 
 using namespace constants;
 
+static float yaw_=0;
+
 Char::Char(Context* context_): 
     LogicComponent(context_)
 {
@@ -16,9 +18,59 @@ Char::Char(Context* context_):
 
     camera_node->SetPosition(Vector3(100, 185, 100));
 
-    vox = new Vox();
-    vox->LoadVoxFile("models/car1.vox");
-    node = GetSubsystem<Game>()->scene_->CreateChild("Car");
+    //vox = new Vox();
+    //vox->LoadVoxFile("models/char1.vox");
+
+
+    VoxFrame* curr;
+    VoxFrame* tmp;
+
+    // Load first frame
+    this->vox_frame = new VoxFrame();
+    vox_frame->LoadVoxFile("models/horse-00.vox");
+
+
+    // Traverse from the head frame
+    vox = this->vox_frame;
+    
+    tmp = new VoxFrame();
+    tmp->LoadVoxFile("models/horse-01.vox");
+    vox_frame->SetNextFrame(tmp);
+    
+    curr = tmp;
+    tmp = new VoxFrame();
+    tmp->LoadVoxFile("models/horse-02.vox");
+    curr->SetNextFrame(tmp);
+
+    curr = tmp;
+    tmp = new VoxFrame();
+    tmp->LoadVoxFile("models/horse-03.vox");
+    curr->SetNextFrame(tmp);
+    // Loop back to first frame
+    tmp->SetNextFrame(this->vox_frame);
+    
+    
+    curr = this->vox_frame;  
+    std::cout << "Frame 1:" << curr << std::endl;
+    curr = curr->GetNextFrame();  
+    std::cout << "Frame 2:" << curr << std::endl;
+    curr = curr->GetNextFrame();  
+    std::cout << "Frame 3:" << curr << std::endl;
+    curr = curr->GetNextFrame();  
+    std::cout << "Frame 4:" << curr << std::endl;
+    curr = curr->GetNextFrame();  
+    std::cout << "Frame 5:" << curr << std::endl;
+
+    this->state = Idle;
+ 
+    // Load from voxel blocks pack
+    //vox->LoadVoxFile(";models/Map/Dirt/Dirt Brown 0.vox");
+    //vox->LoadVoxFile("models/Plant/Pineapple/Pineapple.vox");
+    
+    
+    ///home/bhagabot/dev/SuperMayaLand/urho3d/build/bin/models/    
+
+    node = GetSubsystem<Game>()->scene_->CreateChild("Person");
     chunk = node->CreateComponent<Chunk>();
     chunk->node = node;
     chunk->Init(0,
@@ -66,7 +118,15 @@ Char::Char(Context* context_):
    // light->SetCastShadows(true);
    // 
     node->SetPosition(Vector3(300, 0.3, 300));
-    //node->SetScale(2);
+    
+    
+/*        IntVector2 mouseMove = IntVector2(2.0,0.0); //input->GetMouseMove();
+        static float yaw_=0;
+        yaw_+=MOUSE_SENSITIVITY*mouseMove.x_;
+        node->SetRotation(Quaternion(yaw_, Vector3::UP));
+ */
+ 
+    node->SetScale(0.6);
 
    // jump_load = false;
    // jump = false;
@@ -76,6 +136,7 @@ Char::Char(Context* context_):
  //   mana = 2;
  //   souls = 0;
  //   alive = true;
+ 
 }
 
 Char::~Char()
@@ -146,13 +207,13 @@ void Char::Update(float time, float timeStep)
         node->SetPosition(pos);
     }
 
-   // if(jump) {
-   //     node->Translate(Vector3(0,1, 0)*MOVE_SPEED*timeStep*velo_up);
-   //     node->Translate(Vector3(0,0, 1)*MOVE_SPEED*timeStep*velo_forward);
-   //     node->Translate(Vector3(0,0,-1)*MOVE_SPEED*timeStep*velo_back);
-   //     node->Translate(Vector3(-1,0,0)*MOVE_SPEED*timeStep*velo_left);
-   //     node->Translate(Vector3( 1,0,0)*MOVE_SPEED*timeStep*velo_right);
-   // }
+    if(jump) {
+        node->Translate(Vector3(0,1, 0)*MOVE_SPEED*timeStep*velo_up);
+        node->Translate(Vector3(0,0, 1)*MOVE_SPEED*timeStep*velo_forward);
+        node->Translate(Vector3(0,0,-1)*MOVE_SPEED*timeStep*velo_back);
+        node->Translate(Vector3(-1,0,0)*MOVE_SPEED*timeStep*velo_left);
+        node->Translate(Vector3( 1,0,0)*MOVE_SPEED*timeStep*velo_right);
+    }
 
     Vector3 nv = node->GetPosition();
     if(!world->Exists(nv.x_, nv.y_-1, nv.z_) && nv.y_ > 1 ) {
@@ -170,8 +231,8 @@ void Char::Update(float time, float timeStep)
         }
         velo_back = 0;
         velo_forward = 0;
-        velo_left = 0;
-        velo_right = 0;
+        //velo_left = 0;
+        //velo_right = 0;
         falling = false;
         jump = false;
     }
@@ -193,34 +254,44 @@ void Char::Update(float time, float timeStep)
             velo_back = 0.5;
         }
     }
+
+    // Dampen turning velocity
+    velo_left = velo_left * 0.98f;
+    velo_right = velo_right * 0.98f;
+
     if(input->GetKeyDown('A')) {
-        node->Translate(Vector3(-1,0,0)*MOVE_SPEED*timeStep);
         move = true;
         if(!jump) {
-            velo_left = 0.5;
+            velo_left += 0.5;
         }
     }
-    if(input->GetKeyDown('D')) {
-        node->Translate(Vector3( 1,0,0)*MOVE_SPEED*timeStep);
-        move = true;
+    if(input->GetKeyDown('D')) {  
+      move = true;
         if(!jump) {
-            velo_right = 0.5;
+            velo_right += 0.5;
         }
     }
 
-   // if(input->GetKeyDown(KEY_SPACE) && !jump){
-   //     jump_load = true;
-   //     velo_up += 0.5;
-   // } else {
-   //     if(jump_load) {
-   //         jump = true;
-   //         jump_load = false;
-   //         falling = true;
-   //         if(velo_up > 3) {
-   //             velo_up = 3;
-   //         }
-   //     }
-   // }
+    // Update yaw
+    yaw_ += (velo_right-velo_left);
+
+    // Apply rotation
+    node->SetRotation(Quaternion(yaw_, Vector3::UP));
+
+
+    if(input->GetKeyDown(KEY_SPACE) && !jump){
+        jump_load = true;
+        velo_up += 0.5;
+    } else {
+        if(jump_load) {
+            jump = true;
+            jump_load = false;
+            falling = true;
+            if(velo_up > 3) {
+                velo_up = 3;
+            }
+        }
+    }
 
 
     if (input->GetMouseButtonPress(MOUSEB_LEFT)) {
@@ -269,10 +340,11 @@ void Char::Update(float time, float timeStep)
     }
 
     if(!GetSubsystem<Input>()->IsMouseVisible()) {
+        /*
         IntVector2 mouseMove = input->GetMouseMove();
         static float yaw_=0;
         yaw_+=MOUSE_SENSITIVITY*mouseMove.x_;
-        node->SetRotation(Quaternion(yaw_, Vector3::UP));
+        node->SetRotation(Quaternion(yaw_, Vector3::UP));*/
     }
     camera_node->Pitch(45.0f);
 
@@ -377,11 +449,65 @@ void Char::Update(float time, float timeStep)
   //      RemoveMana(0.5);
   //      ResourceCache* cache = context_->GetSubsystem<ResourceCache>();
   //      Node* n_particle = GetSubsystem<Game>()->scene_->CreateChild("smoke");
-  //      Vector3 pos = node->GetPosition();
+  //      Vector3 pos =   
   //      n_particle->Translate(Vector3(pos.x_, 10, pos.z_));
   //      n_particle->Scale(10);
   //      ParticleEmitter* emitter=n_particle->CreateComponent<ParticleEmitter>();
   //      emitter->SetEffect(cache->GetResource<ParticleEffect>("Particle/smoke.xml"));
   //      dmg_time = 0;
   //  }
+  
+  
+  
+  this->frame_time += timeStep;
+  
+  if (frame_time > (1.0f/6.0f)) {
+  
+      this->vox_frame = this->vox_frame->GetNextFrame();
+      vox = vox_frame;
+    //    chunk->dirty = true;
+
+//        std::cout << "Current Frame vox = " << vox << std::endl;
+
+      // Generate chunk per frame
+        int s = 1;
+        for(int x = 0; x < vox->GetSizeX(); x++) {
+            for(int y = 0; y < vox->GetSizeY(); y++) {
+                for(int z = 0; z < vox->GetSizeZ(); z++) {
+                    int val = vox->GetVoxelData(x,y,z);
+                    int r = (val >> 8) & 0xFF;
+                    int g = (val >> 16) & 0xFF;
+                    int b = (val >> 24) & 0xFF;
+
+                    for(int x_ = s*x; x_ < s*x+s; x_++) {
+                        for(int y_ = s*y; y_ < s*y+s; y_++) {
+                            for(int z_ = s*z; z_ < s*z+s; z_++) {
+                                chunk->AddBlock(x_, y_, z_, r, g, b);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        chunk->dirty = true;
+        chunk->Build();
+        chunk->CreateModel();
+        chunk->SetScale(scale);
+       // ResourceCache* cache = context->GetSubsystem<ResourceCache>();
+       // emitter = node->CreateComponent<ParticleEmitter>();
+       // emitter->SetEffect(cache->GetResource<ParticleEffect>("Particle/player.xml"));
+       // effect = emitter->GetEffect();
+       // Light* light = node->CreateComponent<Light>();
+       // light->SetLightType(LIGHT_POINT);
+       // light->SetRange(40);
+       // light->SetBrightness(1.5);
+       // light->SetColor(Color(0.2,.2,0.9,1));
+       // light->SetCastShadows(true);
+       // 
+    //    node->SetPosition(Vector3(300, 0.3, 300));
+    
+        frame_time = 0;
+  }
+  
 }

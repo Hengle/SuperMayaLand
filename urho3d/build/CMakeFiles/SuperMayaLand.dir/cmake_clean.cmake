@@ -8,9 +8,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/SuperMayaLand.dir/soul.cpp.o"
   "CMakeFiles/SuperMayaLand.dir/utils.cpp.o"
   "CMakeFiles/SuperMayaLand.dir/vox.cpp.o"
+  "CMakeFiles/SuperMayaLand.dir/voxframe.cpp.o"
   "CMakeFiles/SuperMayaLand.dir/world.cpp.o"
-  "bin/SuperMayaLand.pdb"
   "bin/SuperMayaLand"
+  "bin/SuperMayaLand.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

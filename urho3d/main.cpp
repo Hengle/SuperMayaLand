@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
+#include <ctime>
 
 using namespace std;
 using namespace Urho3D;
@@ -20,19 +21,30 @@ Game::~Game()
     delete world;
 }
 
+long int unix_timestamp()
+{
+    time_t t = std::time(0);
+    long int now = static_cast<long int> (t);
+    return now;
+}
+
 void Game::Setup() 
 {
+    long int now = unix_timestamp();
+//    std::cout << now;
+    std::string buildName;
+    buildName = "Super Maya Land - Build #" + std::to_string(now);
     std::cout << "Setting up..." << std::endl;
 
     // See http://urho3d.github.io/documentation/1.5/_main_loop.html
     // engineParameters_["WindowIcon"] = "";
     engineParameters_["LowQualityShadows"] = true;
-    engineParameters_["TrippleBuffer"] = true;
+    engineParameters_["TripleBuffer"] = true;
     engineParameters_["FullScreen"] = false;
     engineParameters_["HighDPI"] = false;
-    engineParameters_["WindowTitle"] = "The Game";
-    engineParameters_["WindowWidth"] = 800;
-    engineParameters_["WindowHeight"] = 600;
+    engineParameters_["WindowTitle"] = buildName.data();
+    engineParameters_["WindowWidth"] = 1680;
+    engineParameters_["WindowHeight"] = 1050;
     engineParameters_["WindowResizable"] = true;
     engineParameters_["VSync"] = true;
     engineParameters_["Multisample"] = 2;
@@ -95,7 +107,7 @@ void Game::Start()
     //  camera->SetOrthographic(true);
     //  camera->SetOrthoSize(1);
 
-    // camera->SetFillMode(FILL_WIREFRAME);
+    //camera->SetFillMode(FILL_WIREFRAME);
 
     GetSubsystem<Renderer>()->SetViewport(0, new Viewport(context_, scene_, camera));
 
@@ -127,9 +139,9 @@ void Game::Start()
     std::cout << "Enemies created." << std::endl;
 
 //
-//    for(int i = 0; i < 10; i++) {
-//        souls.push_back(new Soul(context_, Vector3(20+Random(100), 30, 20+Random(100))));
-//    }
+    for(int i = 0; i < 10; i++) {
+        souls.push_back(new Soul(context_, Vector3(20+Random(100), 30, 20+Random(100))));
+    }
 
 
     std::cout << "INIT TIME: " << end_time - start_time << std::endl;
