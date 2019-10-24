@@ -815,12 +815,13 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/toluapp/src/lib/tolua_to.c" "/Users/badzindagi/dev/SuperMayaLand/cmake-build-debug/CMakeFiles/SuperMayaLand.dir/urho3d/Source/ThirdParty/toluapp/src/lib/tolua_to.c.o"
   "/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Urho3D/IO/MacFileWatcher.m" "/Users/badzindagi/dev/SuperMayaLand/cmake-build-debug/CMakeFiles/SuperMayaLand.dir/urho3d/Source/Urho3D/IO/MacFileWatcher.m.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../urho3d"
   "/usr/local/dev/Urho3D-1.7.1/build/include"
+  "/usr/local/Cellar/llvm/9.0.0/include"
   "../urho3d/Source/Samples"
   "../urho3d/Source/Samples/01_HelloWorld"
   "../urho3d/Source/Samples/02_HelloGUI"
@@ -1018,7 +1019,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson"
   "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson/error"
   "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson/internal"
-  "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson/msinttypes"
   "../urho3d/Source/ThirdParty/Recast/include"
   "../urho3d/Source/ThirdParty/SDL/include"
   "../urho3d/Source/ThirdParty/SDL/src"
@@ -2053,12 +2053,13 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/badzindagi/dev/SuperMayaLand/urho3d/vox.cpp" "/Users/badzindagi/dev/SuperMayaLand/cmake-build-debug/CMakeFiles/SuperMayaLand.dir/urho3d/vox.cpp.o"
   "/Users/badzindagi/dev/SuperMayaLand/urho3d/world.cpp" "/Users/badzindagi/dev/SuperMayaLand/cmake-build-debug/CMakeFiles/SuperMayaLand.dir/urho3d/world.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../urho3d"
   "/usr/local/dev/Urho3D-1.7.1/build/include"
+  "/usr/local/Cellar/llvm/9.0.0/include"
   "../urho3d/Source/Samples"
   "../urho3d/Source/Samples/01_HelloWorld"
   "../urho3d/Source/Samples/02_HelloGUI"
@@ -2256,7 +2257,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson"
   "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson/error"
   "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson/internal"
-  "../urho3d/Source/ThirdParty/rapidjson/include/rapidjson/msinttypes"
   "../urho3d/Source/ThirdParty/Recast/include"
   "../urho3d/Source/ThirdParty/SDL/include"
   "../urho3d/Source/ThirdParty/SDL/src"

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SuperMayaLand"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\CMake\Modules\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SuperMayaLand">
+				<Option output="/Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin/SuperMayaLand" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DURHO3D_STATIC_DEFINE"/>
+					<Add option="-DURHO3D_ANGELSCRIPT"/>
+					<Add option="-DURHO3D_IK"/>
+					<Add option="-DURHO3D_LOGGING"/>
+					<Add option="-DURHO3D_LUA"/>
+					<Add option="-DURHO3D_NAVIGATION"/>
+					<Add option="-DURHO3D_NETWORK"/>
+					<Add option="-DURHO3D_PHYSICS"/>
+					<Add option="-DURHO3D_PROFILING"/>
+					<Add option="-DURHO3D_THREADING"/>
+					<Add option="-DURHO3D_URHO2D"/>
+					<Add option="-DURHO3D_WEBP"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include/Urho3D/ThirdParty"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include/Urho3D/ThirdParty/Bullet"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include/Urho3D/ThirdParty/Lua"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/lib/clang/9.0.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 SuperMayaLand"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SuperMayaLand/fast">
+				<Option output="/Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin/SuperMayaLand" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DURHO3D_STATIC_DEFINE"/>
+					<Add option="-DURHO3D_ANGELSCRIPT"/>
+					<Add option="-DURHO3D_IK"/>
+					<Add option="-DURHO3D_LOGGING"/>
+					<Add option="-DURHO3D_LUA"/>
+					<Add option="-DURHO3D_NAVIGATION"/>
+					<Add option="-DURHO3D_NETWORK"/>
+					<Add option="-DURHO3D_PHYSICS"/>
+					<Add option="-DURHO3D_PROFILING"/>
+					<Add option="-DURHO3D_THREADING"/>
+					<Add option="-DURHO3D_URHO2D"/>
+					<Add option="-DURHO3D_WEBP"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include/Urho3D/ThirdParty"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include/Urho3D/ThirdParty/Bullet"/>
+					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include/Urho3D/ThirdParty/Lua"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/lib/clang/9.0.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 SuperMayaLand/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/badzindagi/dev/SuperMayaLand/urho3d/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/char.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/char.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/constants.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/enemy.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/enemy.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/main.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/map.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/map.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/phys.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/phys.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/soul.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/soul.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/utils.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/utils.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/vox.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/vox.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/voxframe.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/voxframe.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/world.cpp">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/world.h">
+			<Option target="SuperMayaLand"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/CMake/Modules/CheckCompilerToolchain.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/CMake/Modules/CheckHost.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/CMake/Modules/FindUrho3D.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/CMake/Modules/GenerateExportHeader.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/CMake/Modules/UrhoCommon.cmake">
+			<Option virtualFolder="CMake Files\CMake\Modules\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

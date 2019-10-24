@@ -58,6 +58,7 @@ void Game::Setup()
 void Game::Start()
 {
 
+    GetSubsystem<UI>()->SetCursor(0);
 
     for(int i = 0; i < 100000; i++) {
         indexData.Push(i);
@@ -132,7 +133,7 @@ void Game::Start()
     player = new Char(context_);
     std::cout << "Character created." << std::endl;
 
-    for(int i = 0; i < 100; i++) {
+    for(int i = 0; i < 1; i++) {
         enemies.push_back(new Enemy(context_, Vector3(10+Random(500), 2, 10+Random(500))));
     }
     
@@ -140,7 +141,7 @@ void Game::Start()
 
 //
     for(int i = 0; i < 10; i++) {
-        souls.push_back(new Soul(context_, Vector3(20+Random(100), 30, 20+Random(100))));
+        //souls.push_back(new Soul(context_, Vector3(20+Random(100), 30, 20+Random(100))));
     }
 
 
@@ -184,12 +185,12 @@ void Game::HandleUpdate(StringHash eventType,VariantMap& eventData)
     world->Update(time_, timeStep);
     player->Update(time_, timeStep);
 
-    for(int i = 0; i < souls.size(); i++) {
+/*    for(int i = 0; i < souls.size(); i++) {
         souls[i]->Update(time_, timeStep);
     }
     for(int i = 0; i < enemies.size(); i++) {
         enemies[i]->Update(time_, timeStep);
-    }
+    }*/
     // map->Update(time_, timeStep);
 
     if(time_ > 1)

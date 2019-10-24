@@ -52,14 +52,6 @@ voxframe.h
 chunk.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.h
 
-/Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.cpp
-chunk.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.h
-main.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
-Urho3D/Core/Timer.h
--
-
 /Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.h
 Urho3D/Graphics/Model.h
 -
@@ -92,12 +84,6 @@ utils.h
 
 /Users/badzindagi/dev/SuperMayaLand/urho3d/constants.h
 
-/Users/badzindagi/dev/SuperMayaLand/urho3d/enemy.cpp
-enemy.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/enemy.h
-main.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
-
 /Users/badzindagi/dev/SuperMayaLand/urho3d/enemy.h
 string
 -
@@ -121,22 +107,6 @@ vox.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/vox.h
 chunk.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.h
-
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.cpp
-main.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
-math.h
--
-string
--
-fstream
--
-iostream
--
-stdlib.h
--
-ctime
--
 
 /Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
 string
@@ -218,12 +188,6 @@ enemy.h
 soul.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/soul.h
 
-/Users/badzindagi/dev/SuperMayaLand/urho3d/map.cpp
-map.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/map.h
-main.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
-
 /Users/badzindagi/dev/SuperMayaLand/urho3d/map.h
 string
 -
@@ -243,12 +207,6 @@ vox.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/vox.h
 PerlinNoise.hpp
 /Users/badzindagi/dev/SuperMayaLand/urho3d/PerlinNoise.hpp
-
-/Users/badzindagi/dev/SuperMayaLand/urho3d/phys.cpp
-phys.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/phys.h
-main.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
 
 /Users/badzindagi/dev/SuperMayaLand/urho3d/phys.h
 string
@@ -300,14 +258,6 @@ constants.h
 utils.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/utils.h
 
-/Users/badzindagi/dev/SuperMayaLand/urho3d/soul.cpp
-soul.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/soul.h
-main.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
-utils.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/utils.h
-
 /Users/badzindagi/dev/SuperMayaLand/urho3d/soul.h
 string
 -
@@ -326,19 +276,11 @@ vox.h
 chunk.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/chunk.h
 
-/Users/badzindagi/dev/SuperMayaLand/urho3d/utils.cpp
-utils.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/utils.h
-
 /Users/badzindagi/dev/SuperMayaLand/urho3d/utils.h
 Urho3D/Math/Vector3.h
 -
 Urho3D/Math/Color.h
 -
-
-/Users/badzindagi/dev/SuperMayaLand/urho3d/vox.cpp
-vox.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/vox.h
 
 /Users/badzindagi/dev/SuperMayaLand/urho3d/vox.h
 string
@@ -354,21 +296,9 @@ math.h
 constants.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/constants.h
 
-/Users/badzindagi/dev/SuperMayaLand/urho3d/voxframe.cpp
-voxframe.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/voxframe.h
-
 /Users/badzindagi/dev/SuperMayaLand/urho3d/voxframe.h
 vox.h
 /Users/badzindagi/dev/SuperMayaLand/urho3d/vox.h
-
-/Users/badzindagi/dev/SuperMayaLand/urho3d/world.cpp
-world.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/world.h
-main.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/main.h
-utils.h
-/Users/badzindagi/dev/SuperMayaLand/urho3d/utils.h
 
 /Users/badzindagi/dev/SuperMayaLand/urho3d/world.h
 Urho3D/Core/CoreEvents.h

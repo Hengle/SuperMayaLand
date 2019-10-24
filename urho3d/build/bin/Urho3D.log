@@ -1,10 +1,47 @@
-[Thu Oct 17 08:16:46 2019] INFO: Opened log file Urho3D.log
-[Thu Oct 17 08:16:46 2019] INFO: Created 1 worker thread
-[Thu Oct 17 08:16:46 2019] INFO: Added resource path /Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin/Data/
-[Thu Oct 17 08:16:46 2019] INFO: Added resource path /Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin/CoreData/
-[Thu Oct 17 08:16:47 2019] INFO: Set screen mode 1440x829 windowed monitor 0 resizable multisample 2
-[Thu Oct 17 08:16:47 2019] INFO: Initialized input
-[Thu Oct 17 08:16:47 2019] INFO: Initialized user interface
-[Thu Oct 17 08:16:47 2019] INFO: Initialized renderer
-[Thu Oct 17 08:16:47 2019] INFO: Set audio mode 44100 Hz stereo interpolated
-[Thu Oct 17 08:16:47 2019] INFO: Initialized engine
+[Thu Oct 24 17:42:51 2019] INFO: Opened log file Urho3D.log
+[Thu Oct 24 17:42:51 2019] INFO: Created 1 worker thread
+[Thu Oct 24 17:42:51 2019] INFO: Added resource path /Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin/Data/
+[Thu Oct 24 17:42:51 2019] INFO: Added resource path /Users/badzindagi/dev/SuperMayaLand/urho3d/build/bin/CoreData/
+[Thu Oct 24 17:42:51 2019] INFO: Set screen mode 1440x829 windowed monitor 0 resizable multisample 2
+[Thu Oct 24 17:42:51 2019] INFO: Initialized input
+[Thu Oct 24 17:42:51 2019] INFO: Initialized user interface
+[Thu Oct 24 17:42:51 2019] DEBUG: Loading resource Textures/Ramp.png
+[Thu Oct 24 17:42:51 2019] DEBUG: Loading temporary resource Textures/Ramp.xml
+[Thu Oct 24 17:42:51 2019] DEBUG: Loading resource Textures/Spot.png
+[Thu Oct 24 17:42:51 2019] DEBUG: Loading temporary resource Textures/Spot.xml
+[Thu Oct 24 17:42:51 2019] DEBUG: Loading resource Techniques/NoTexture.xml
+[Thu Oct 24 17:42:51 2019] DEBUG: Loading resource RenderPaths/Forward.xml
+[Thu Oct 24 17:42:51 2019] INFO: Initialized renderer
+[Thu Oct 24 17:42:52 2019] INFO: Set audio mode 44100 Hz stereo interpolated
+[Thu Oct 24 17:42:52 2019] INFO: Initialized engine
+[Thu Oct 24 17:42:52 2019] DEBUG: Loading resource UI/DefaultStyle.xml
+[Thu Oct 24 17:42:52 2019] DEBUG: Loading resource Fonts/Anonymous Pro.ttf
+[Thu Oct 24 17:42:52 2019] DEBUG: Font face Anonymous Pro (12pt) has 624 glyphs
+[Thu Oct 24 17:42:52 2019] DEBUG: Loading resource Models/Box.mdl
+[Thu Oct 24 17:42:52 2019] DEBUG: Loading resource Materials/vcolors.xml
+[Thu Oct 24 17:42:52 2019] DEBUG: Loading resource Techniques/NoTextureVCol.xml
+[Thu Oct 24 17:42:52 2019] DEBUG: Loading resource Materials/vcolors2.xml
+[Thu Oct 24 17:42:52 2019] DEBUG: Font face Anonymous Pro (11pt) has 624 glyphs
+[Thu Oct 24 17:42:53 2019] DEBUG: Reloading shaders
+[Thu Oct 24 17:42:53 2019] DEBUG: Set occlusion buffer size 256x148 with 5 mip levels and 1 thread buffers
+[Thu Oct 24 17:42:53 2019] DEBUG: Loading resource Shaders/GLSL/Shadow.glsl
+[Thu Oct 24 17:42:53 2019] DEBUG: Loading resource Shaders/GLSL/LitSolid.glsl
+[Thu Oct 24 17:42:53 2019] DEBUG: Compiled vertex shader Shadow()
+[Thu Oct 24 17:42:53 2019] DEBUG: Compiled pixel shader Shadow()
+[Thu Oct 24 17:42:53 2019] DEBUG: Linked vertex shader Shadow() and pixel shader Shadow()
+[Thu Oct 24 17:42:53 2019] WARNING: Shader LitSolid(DIRLIGHT NOUV PERPIXEL SHADOW VERTEXCOLOR) does not use the define NOUV
+[Thu Oct 24 17:42:53 2019] DEBUG: Compiled vertex shader LitSolid(DIRLIGHT NOUV PERPIXEL SHADOW VERTEXCOLOR)
+[Thu Oct 24 17:42:53 2019] DEBUG: Compiled pixel shader LitSolid(AMBIENT DIRLIGHT PERPIXEL SHADOW SIMPLE_SHADOW VERTEXCOLOR)
+[Thu Oct 24 17:42:53 2019] DEBUG: Linked vertex shader LitSolid(DIRLIGHT NOUV PERPIXEL SHADOW VERTEXCOLOR) and pixel shader LitSolid(AMBIENT DIRLIGHT PERPIXEL SHADOW SIMPLE_SHADOW VERTEXCOLOR)
+[Thu Oct 24 17:42:53 2019] DEBUG: Loading resource Shaders/GLSL/Basic.glsl
+[Thu Oct 24 17:42:53 2019] DEBUG: Compiled vertex shader Basic(DIFFMAP VERTEXCOLOR)
+[Thu Oct 24 17:42:53 2019] DEBUG: Compiled pixel shader Basic(ALPHAMAP VERTEXCOLOR)
+[Thu Oct 24 17:42:53 2019] DEBUG: Linked vertex shader Basic(DIFFMAP VERTEXCOLOR) and pixel shader Basic(ALPHAMAP VERTEXCOLOR)
+[Thu Oct 24 17:42:56 2019] DEBUG: Loading resource Shaders/GLSL/Stencil.glsl
+[Thu Oct 24 17:42:56 2019] DEBUG: Compiled vertex shader Stencil()
+[Thu Oct 24 17:42:56 2019] DEBUG: Compiled pixel shader Stencil()
+[Thu Oct 24 17:42:56 2019] DEBUG: Linked vertex shader Stencil() and pixel shader Stencil()
+[Thu Oct 24 17:42:56 2019] WARNING: Shader LitSolid(NOUV PERPIXEL POINTLIGHT SHADOW VERTEXCOLOR) does not use the define NOUV
+[Thu Oct 24 17:42:56 2019] DEBUG: Compiled vertex shader LitSolid(NOUV PERPIXEL POINTLIGHT SHADOW VERTEXCOLOR)
+[Thu Oct 24 17:42:56 2019] DEBUG: Compiled pixel shader LitSolid(PERPIXEL POINTLIGHT SHADOW SIMPLE_SHADOW VERTEXCOLOR)
+[Thu Oct 24 17:42:56 2019] DEBUG: Linked vertex shader LitSolid(NOUV PERPIXEL POINTLIGHT SHADOW VERTEXCOLOR) and pixel shader LitSolid(PERPIXEL POINTLIGHT SHADOW SIMPLE_SHADOW VERTEXCOLOR)

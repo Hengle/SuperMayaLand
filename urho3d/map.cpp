@@ -85,20 +85,27 @@ void Map::GeneratePark(Vector3 from, Vector3 to)
             }
             if(x % 20 == 0 && z % 20 == 0 && Random(10) < 1) {
                 // Trees
-                int base = 5+Random(10)/2;
+                int base = 4+Random(30)/2;
                 int height = 25+Random(20);
-                int g = 100+Random(100);
+                int r = Random(255);
+                int g = 100+Random(150);
+                int b = Random(255);
                 for(int xx = x-base; xx < x+base; xx++) {
                     for(int zz = z - base; zz < z+base; zz++) {
                         for(int yy = 0; yy < height; yy++) {
                             if(yy < height/3 && xx > x-base/2 && xx < x+base/2 && zz > z-base/2 && zz < z+base/2) { 
                                 world->AddBlock(xx, y+yy, zz, 139, 69, 20);
                             } else if(yy >= height/3 && (xx == x-base || xx == x+base-1 || zz == z-base || zz == z+base-1 || yy == height/3 || yy == height-1 )) {
-                                world->AddBlock(xx, y+yy, zz, 34, g, 34);
+//                                world->AddBlock(xx, y+yy, zz, 34, g, 34);
+
+                                world->AddBlock(xx, y+yy, zz, r, g, b);
+
                             }
                         }
                     }
                 }
+
+
                 // Around trees.
                 int size = 10+Random(20);
                 for(int xx = x - size; xx < x + size; xx++) {
@@ -919,9 +926,9 @@ void Map::Level1()
                 //                Vector3(x+max_x-side_walk_size, road_pos_y+1, z+max_z-side_walk_size)
                 //                 );
             } else if(type == 0)  {
-            /*    GeneratePark(Vector3(x+side_walk_size, road_pos_y+1, z+side_walk_size), 
+                GeneratePark(Vector3(x+side_walk_size, road_pos_y+1, z+side_walk_size),
                              Vector3(x+max_x-side_walk_size, road_pos_y+1, z+max_z-side_walk_size)
-                            );*/
+                            );
             }
         }
     }

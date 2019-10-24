@@ -8,7 +8,7 @@ static float yaw_=0;
 Char::Char(Context* context_): 
     LogicComponent(context_)
 {
-    scale = 0.7f;
+    scale = 0.5f;
     context = context_;
     input = GetSubsystem<Input>();
     world = GetSubsystem<Game>()->world;
@@ -117,16 +117,15 @@ Char::Char(Context* context_):
    // light->SetColor(Color(0.2,.2,0.9,1));
    // light->SetCastShadows(true);
    // 
-    node->SetPosition(Vector3(300, 0.3, 300));
-    
-    
+    node->SetPosition(Vector3(300, 0.3, 400));
+
 /*        IntVector2 mouseMove = IntVector2(2.0,0.0); //input->GetMouseMove();
         static float yaw_=0;
         yaw_+=MOUSE_SENSITIVITY*mouseMove.x_;
         node->SetRotation(Quaternion(yaw_, Vector3::UP));
  */
  
-    node->SetScale(0.6);
+//    node->SetScale(0.6);
 
    // jump_load = false;
    // jump = false;
@@ -346,7 +345,7 @@ void Char::Update(float time, float timeStep)
         yaw_+=MOUSE_SENSITIVITY*mouseMove.x_;
         node->SetRotation(Quaternion(yaw_, Vector3::UP));*/
     }
-    camera_node->Pitch(45.0f);
+    //camera_node->Pitch(45.0f);
 
    // if(move) {
    //     effect->SetMinVelocity(10);
@@ -383,7 +382,7 @@ void Char::Update(float time, float timeStep)
 
     // Third person camera: position behind the character
     Vector3 aimPoint = node->GetPosition() + node->GetRotation() * Vector3(0.0f, 1.7f, 0.0f);
-    Quaternion dir = node->GetRotation() * Quaternion(45, Vector3::RIGHT);
+    Quaternion dir = node->GetRotation();// * Quaternion(180, Vector3::RIGHT) * Quaternion(60, Vector3::UP) * Quaternion(0, Vector3::BACK);
 
     // Make up/down smooth
     if(aimPoint.y_ != new_y) {
@@ -403,7 +402,7 @@ void Char::Update(float time, float timeStep)
     scene->GetComponent<PhysicsWorld>()->RaycastSingle(result, Ray(aimPoint, rayDir), rayDistance, 2);
     if (result.body_)
         rayDistance = Min(rayDistance, result.distance_);
-    rayDistance = Clamp(rayDistance, 45.0f, 150.0f);
+    rayDistance = Clamp(rayDistance, 20.0f, 150.0f);
     
     // Smooth cam
     if(rayDistance != new_distance) {
@@ -411,9 +410,9 @@ void Char::Update(float time, float timeStep)
         new_distance = rayDistance;
     }
 
-    float diff = (new_distance-old_distance)/20;
+    float diff = (new_distance-old_distance)/50;
     old_pos += diff;
-    rayDistance = Clamp(old_pos, 45.0f, 250.0f);
+    rayDistance = Clamp(old_pos, 45.0f, 150.0f);
 
     old_pos = rayDistance;
     camera_node->SetPosition(aimPoint + rayDir * rayDistance);
@@ -494,20 +493,27 @@ void Char::Update(float time, float timeStep)
         chunk->Build();
         chunk->CreateModel();
         chunk->SetScale(scale);
-       // ResourceCache* cache = context->GetSubsystem<ResourceCache>();
+        //chunk->SetRotation();
+//        chunk->node->SetRotation(node->GetRotation() + (0.3, 0.0, 0.0));
+
+      // ResourceCache* cache = context->GetSubsystem<ResourceCache>();
        // emitter = node->CreateComponent<ParticleEmitter>();
        // emitter->SetEffect(cache->GetResource<ParticleEffect>("Particle/player.xml"));
        // effect = emitter->GetEffect();
-       // Light* light = node->CreateComponent<Light>();
-       // light->SetLightType(LIGHT_POINT);
-       // light->SetRange(40);
-       // light->SetBrightness(1.5);
-       // light->SetColor(Color(0.2,.2,0.9,1));
-       // light->SetCastShadows(true);
+        Light* light = node->CreateComponent<Light>();
+        light->SetLightType(LIGHT_POINT);
+        light->SetRange(5);
+        light->SetBrightness(1.5);
+        light->SetColor(Color(0.2,.2,0.9,1));
+        light->SetCastShadows(true);
        // 
     //    node->SetPosition(Vector3(300, 0.3, 300));
-    
-        frame_time = 0;
+
+//      Quaternion dir = node->GetRotation() * Quaternion(90, Vector3::RIGHT);
+//      Vector3 unitDir = Vector3(0.0, 0.0, -1.0);//;Vector3::BACK;
+//      node->SetRotation(dir);
+
+      frame_time = 0;
   }
   
 }

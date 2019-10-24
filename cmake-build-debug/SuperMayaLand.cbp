@@ -4,7 +4,7 @@
 	<Project>
 		<Option title="SuperMayaLand"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="clang"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
@@ -42,10 +42,11 @@
 				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d"/>
 					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/include"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Samples"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Samples/01_HelloWorld"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Samples/02_HelloGUI"/>
@@ -243,7 +244,6 @@
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/error"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/internal"/>
-					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/msinttypes"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/Recast/include"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/SDL/include"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/SDL/src"/>
@@ -375,10 +375,9 @@
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Urho3D/Scene"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Urho3D/UI"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Urho3D/Urho2D"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/lib/clang/9.0.0/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -395,10 +394,11 @@
 				<Option working_dir="/Users/badzindagi/dev/SuperMayaLand/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d"/>
 					<Add directory="/usr/local/dev/Urho3D-1.7.1/build/include"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/include"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Samples"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Samples/01_HelloWorld"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Samples/02_HelloGUI"/>
@@ -596,7 +596,6 @@
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/error"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/internal"/>
-					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/msinttypes"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/Recast/include"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/SDL/include"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/SDL/src"/>
@@ -728,10 +727,9 @@
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Urho3D/Scene"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Urho3D/UI"/>
 					<Add directory="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/Urho3D/Urho2D"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/llvm/9.0.0/lib/clang/9.0.0/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -2836,12 +2834,6 @@
 			<Option target="SuperMayaLand"/>
 		</Unit>
 		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/Assimp/contrib/rapidjson/include/rapidjson/memorystream.h">
-			<Option target="SuperMayaLand"/>
-		</Unit>
-		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/Assimp/contrib/rapidjson/include/rapidjson/msinttypes/inttypes.h">
-			<Option target="SuperMayaLand"/>
-		</Unit>
-		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/Assimp/contrib/rapidjson/include/rapidjson/msinttypes/stdint.h">
 			<Option target="SuperMayaLand"/>
 		</Unit>
 		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/Assimp/contrib/rapidjson/include/rapidjson/ostreamwrapper.h">
@@ -10684,12 +10676,6 @@
 			<Option target="SuperMayaLand"/>
 		</Unit>
 		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/memorystream.h">
-			<Option target="SuperMayaLand"/>
-		</Unit>
-		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/msinttypes/inttypes.h">
-			<Option target="SuperMayaLand"/>
-		</Unit>
-		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/msinttypes/stdint.h">
 			<Option target="SuperMayaLand"/>
 		</Unit>
 		<Unit filename="/Users/badzindagi/dev/SuperMayaLand/urho3d/Source/ThirdParty/rapidjson/include/rapidjson/ostreamwrapper.h">
